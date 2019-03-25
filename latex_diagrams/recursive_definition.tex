@@ -1,0 +1,13 @@
+\documentclass[tikz, border=5pt]{standalone}
+
+\begin{document}
+\begin{equation}
+f(k, n) = 
+\begin{cases}
+  0 & \text{if } n = 0 \\
+  n & \text{if } k = 1 \\
+  min(max(f(k \text{, } n - x) \text{, } f(k - 1 \text{, } x - 1))
+  \text{ for } x \text{ in } [1 ... n]) + 1 & \text{if } n > 0 \text{ and } k > 1 \\
+\end{cases}
+\end{equation}
+\end{document}
