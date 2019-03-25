@@ -16,10 +16,10 @@ def naive_recursive(k, n):
         int: The minimum number of attempts that must be made to find the correct floor.
 
     """
-    # If no floors remaining, we have solved the problem.
+    # If no floors remaining, no more attempts need to be made.
     if n == 0:
         return 0
-    # It will take n attempts for 1 egg (one for each floor).
+    # It will take n attempts to find the correct floor if there is only one egg remaining.
     if k == 1:
         return n
     # Solve the problem recursively.
@@ -38,7 +38,7 @@ def dynamic_iteration(k, n):
         int: The minimum number of attempts that must be made to find the correct floor.
 
     """
-    # Handle if only 1 egg.
+    # If only one egg remains, n attempts must be made to find the correct floor.
     if k == 1:
         return n
     # Lookup table for previous solutions.

@@ -1,11 +1,13 @@
 # Egg Drop Problem - Dynamic Programming
+[![Build Status](https://travis-ci.com/KYDronePilot/EggDropProblem.svg?token=UPpYeFG6qsnEPAAd486T&branch=master)](https://travis-ci.com/KYDronePilot/EggDropProblem)
+
 A simple dynamic programming solution to the egg drop problem
 
-## Problem description
-The problem consists of determining the minimum number of attempts that must be performed to determine the 
-height at which eggs will break, given a building on n stories and a basket of k eggs. If on the building floor 
-just below the floor at which an eggs breaks, it is assumed that all eggs will break above that floor and all eggs 
-will not break at or below the current floor.
+## Problem Description
+The problem consists of determining the minimum number of attempts of dropping eggs that must be performed to determine 
+the height at which all eggs will break, given a building of `n` stories and a basket of `k` eggs. If on the
+floor just below the floor at which an eggs breaks, it is assumed that all eggs will break above that floor and all 
+eggs will not break at or below that floor. If an egg does not break, it can be reused in another attempt.
 
 ## Recursive Solution
 The solution to this problem can be represented using the following recursive definition:
@@ -23,8 +25,6 @@ an egg at each floor. To find the worst-case for each floor, we find the max of 
 
 Once the worst-case scenarios for each floor are found, the minimum, plus the current attempt is taken as the fewest
 number of attempts that must be made to know for certain at what floor eggs begin to break.
-
-worst-case scenario out of each possible floor being dropped from.
 
 ## Dynamic Approach
 The recursive solution as it is described is incredibly inefficient. Many of the recursive calls overlap, causing 

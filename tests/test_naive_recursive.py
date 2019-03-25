@@ -5,13 +5,14 @@ import egg_drop
 
 class TestNaiveRecursive(TestCase):
     """
-    Basic tests for the naive recursive approach. Same as for dynamic approach.
+    Basic tests for the naive recursive approach. Same as for the dynamic approach.
 
     Notes:
         All test cases are taken from the Super Egg Drop problem on Leetcode:
             https://leetcode.com/problems/super-egg-drop/
 
     """
+
     def test_case_1(self):
         res = egg_drop.naive_recursive(1, 2)
         self.assertEqual(res, 2)
